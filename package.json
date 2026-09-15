@@ -1,6 +1,6 @@
 {
   "name": "dsh-insight-dock",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Insight dock for the DSH Web GUI: lets an agent park a short, strictly-bounded side observation while it works, shows it above the composer, and lets the user ask to hear it later — with a context anchor that survives context compaction.",
   "type": "module",
   "main": "lib/index.js",

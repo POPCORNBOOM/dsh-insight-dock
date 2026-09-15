@@ -187,10 +187,23 @@ window.__ModuleLoader__.load({
 })
 ```
 
-`node --check` proves syntax only. Both real bugs found during development — a
-`join()` separator emitted as content, and `heard` notes escaping the lifetime —
-passed the syntax check *and* a stubbed smoke test, and only appeared once the
-plugin was actually run. Test it live.
+`node --check` proves syntax only. Every real bug found during development — a
+`join()` separator emitted as content, `heard` notes escaping the lifetime, and a
+stateful helper called as a plain function (which charged its `useState` to the
+caller, changed the hook count between renders, and made React discard the whole
+settings section) — passed the syntax check, and the first two passed a stubbed
+smoke test as well. They only appeared once the plugin was actually run.
+
+One regression test covers the failure a syntax check cannot see:
+
+```
+node test/hook-order.mjs lib/client.js
+```
+
+It renders the settings section twice — once while its config is still loading,
+once loaded — and asserts the root component consumes the same number of hooks
+both times. It fails on the shape above, so it is a test rather than a
+decoration: turning the fix back into a plain function call makes it exit 1.
 
 ## License
 
