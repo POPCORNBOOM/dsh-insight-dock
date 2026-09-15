@@ -67,23 +67,26 @@ line, and when:
 
 | Level | Injected when | Content |
 | --- | --- | --- |
-| 不邀请 | never — a close-with-reason notice still gets through | — |
-| 有纸条时 | only while notes are open | the open-note reminder |
-| 一直邀请 | always | a positive criterion: *real, currently unactionable, lost if not written down* |
-| 一直邀请 + 强化 | always | that criterion plus a standing "scan for one before you start" |
+| 关闭 | never — a close-with-reason notice still gets through | — |
+| 弱 | only while insights are open | the open-insight reminder |
+| 中 | always | a positive criterion: *real, currently unactionable, lost if not written down* |
+| 强 | always | that criterion plus a standing "scan for one before you start" |
 
-The default is 有纸条时, which preserves the historical behaviour — and it is
-**structurally unable to produce a first note**, because the reminder it gates on
-does not exist until one has already been recorded. The two levels above it
-inject with zero notes, which is the only way a first one can appear.
+The four levels are one ordinal axis; the table's last two columns are what each
+point on it actually does.
+
+The default is 弱, which preserves the historical behaviour — and it is
+**structurally unable to produce a first insight**, because the reminder it gates
+on does not exist until one has already been recorded. 中 and 强 inject with zero
+insights open, which is the only way a first one can appear.
 
 Every earlier version of this text was a list of prohibitions — *not a to-do*,
 *not an escape hatch for deferring work*, *if you can do it now, do it now*. The
-measured effect was abstention. Across **94 recorded sessions and 625 turns**,
-the only notes ever recorded were the ones created while building this plugin:
+measured effect was abstention. Across **94 recorded sessions and 625 turns**, the
+only insights ever recorded were the ones created while building this plugin:
 17 calls, every one of them a test fixture, and **zero** in the other 93 sessions.
-A description made entirely of reasons not to act produces exactly that. The
-一直邀请 levels state a positive criterion instead.
+A description made entirely of reasons not to act produces exactly that. 中 and 强
+state a positive criterion instead.
 
 ## Two faces
 
