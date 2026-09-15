@@ -1,0 +1,23 @@
+# dsh-insight-dock bundle patch: inserts the dual-face plugin row into a DSH web
+# profile roster. Applied as a profile bundle layer.
+#
+# The row is a bare plugin addressed by package name: the node half
+# (`exports "."`) owns the tools, the prompt-context contribution, the session
+# event fold and the `/insight/api` route; the `dsh.client` declaration in
+# package.json loads the browser half (`exports "./client"`, served at
+# /plugins/dsh-insight-dock/client.js), which renders the insight dock above
+# the composer and the matching settings section.
+#
+# Installing without editing any profile file:
+#
+#   dsh plugin --profile web add dsh-insight-dock@0.1.0
+#
+# or, for a local checkout:
+#
+#   dsh plugin --profile web add link:D:/Projects/DSHPlugins/dsh-insight
+#
+# NOTE: the local-checkout path above is the DIRECTORY name (`dsh-insight`),
+# which intentionally differs from the package name (`dsh-insight-dock`).
+- insert:
+    - id: insight
+      name: dsh-insight-dock
