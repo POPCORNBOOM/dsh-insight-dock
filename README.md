@@ -57,7 +57,7 @@ current note; the arrows step through the rest.
 | 关闭并告诉 agent 为什么 | Removes the note *and* injects a one-line notice carrying your reason. |
 
 **In Settings**, a 见解 section: enable/disable, the concurrent-open cap (1–50),
-the lifetime in minutes (1–1440, default **5**), and a two-step clear.
+and the lifetime in minutes (1–1440, default **5**).
 
 ## Two faces
 
