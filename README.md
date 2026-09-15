@@ -56,8 +56,34 @@ current note; the arrows step through the rest.
 | 关闭 | Removes the note. |
 | 关闭并告诉 agent 为什么 | Removes the note *and* injects a one-line notice carrying your reason. |
 
-**In Settings**, a 见解 section: enable/disable, the concurrent-open cap (1–50),
-and the lifetime in minutes (1–1440, default **5**).
+**In Settings**, a 见解 section: enable/disable, prompt strength (below), the
+concurrent-open cap (1–50), and the lifetime in minutes (1–1440, default **5**).
+
+## Prompt strength
+
+The dock only works if the agent thinks to use it, and that is governed almost
+entirely by one ambient line in its context. The 提示强度 setting picks which
+line, and when:
+
+| Level | Injected when | Content |
+| --- | --- | --- |
+| 不邀请 | never — a close-with-reason notice still gets through | — |
+| 有纸条时 | only while notes are open | the open-note reminder |
+| 一直邀请 | always | a positive criterion: *real, currently unactionable, lost if not written down* |
+| 一直邀请 + 强化 | always | that criterion plus a standing "scan for one before you start" |
+
+The default is 有纸条时, which preserves the historical behaviour — and it is
+**structurally unable to produce a first note**, because the reminder it gates on
+does not exist until one has already been recorded. The two levels above it
+inject with zero notes, which is the only way a first one can appear.
+
+Every earlier version of this text was a list of prohibitions — *not a to-do*,
+*not an escape hatch for deferring work*, *if you can do it now, do it now*. The
+measured effect was abstention. Across **94 recorded sessions and 625 turns**,
+the only notes ever recorded were the ones created while building this plugin:
+17 calls, every one of them a test fixture, and **zero** in the other 93 sessions.
+A description made entirely of reasons not to act produces exactly that. The
+一直邀请 levels state a positive criterion instead.
 
 ## Two faces
 
