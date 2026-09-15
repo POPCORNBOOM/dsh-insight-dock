@@ -108,10 +108,6 @@ window.__ModuleLoader__.load({
 
 `node --check` 只能证明语法。开发过程中发现的两个真 bug——`join()` 的分隔符被当成正文输出、以及 `heard` 状态逃出了存活时间——**语法检查和打桩冒烟测试全绿**，只有真正跑起来才现形。请真跑一遍。
 
-## 命名
-
-这个包原本打算叫 `dsh-insight`，但那个名字在 npm 上已被另一个不相干的 DSH 插件占用，所以叫 `dsh-insight-dock`。本地 checkout 的目录名可能仍叫 `dsh-insight`；起作用的是包名，而且它必须与 client bundle 的 `id` 一致。
-
 ## License
 
 MIT

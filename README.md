@@ -163,13 +163,6 @@ window.__ModuleLoader__.load({
 passed the syntax check *and* a stubbed smoke test, and only appeared once the
 plugin was actually run. Test it live.
 
-## Naming
-
-This package was originally going to be `dsh-insight`. That name is taken on npm
-by an unrelated DSH plugin, so this one is `dsh-insight-dock`. The local checkout
-directory may still be called `dsh-insight`; the package name is the one that
-matters, and it must match the client bundle's `id`.
-
 ## License
 
 MIT
